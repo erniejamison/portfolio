@@ -1,0 +1,255 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link 
+    rel="stylesheet" 
+    href="prism/prism-atom-dark.css" 
+    type="text/css" 
+    media="screen" 
+    />
+
+    <script type="text/javascript" src="prism/prism.js"></script>
+    <script type="text/javascript" src="prism/prism.ruby.js"></script>
+    
+    <title>Ernie Jamison</title>
+    <meta name="description" content="Ernie Jamison is a full-stack
+    web developer specializing in full-stack development. He has
+    experience with Ruby, Rails, JavaScript, and building
+    web applications.">
+  </head>
+
+  <body>
+    <div class="about-container">
+      <ul>
+        <li><a href="#about-me" class="nav-link">ABOUT</a></li>
+        <li><a href="#code-samples" class="nav-link">CODE SAMPLES</a></li>
+        <li><a href="#web-apps" class="nav-link">WEB APPS</a></li>
+        <li><a href="#skills-and-tools" class="nav-link">SKILLS &amp; TOOLS</a></li>
+        <li class="hire-me"><a href="#hire-me" class="nav-link">HIRE ME</a></li>
+      </ul>
+
+      <div class="about">
+        <img src="me.jpg" class="me" />
+
+        <h1 id="about-me">Ernie Jamison</h1>
+        <h2>Web Developer</h2>
+
+        <hr class="grey" />
+
+        <p class="bio">
+          Ernie Jamison is a web developer residing in Cary, North Carolina. In the fall of 2016 Ernie graduated from the Firehose Project, an online 22-week intensive Full-Stack web development program which culminated in a team project. Consisting of five remote developers, the team collaborated during the final eight weeks of the program to build a Ruby on Rails chess application following Agile Software Development methods and practices. 
+        </p>
+      </div>
+    </div>
+
+    <!-- code samples section -->
+
+    <h3 id="code-samples">CODE SAMPLES</h3>
+    <hr class="yellow" />
+
+    <div class="box">
+      <h4>Temperature Conversion</h4>
+      <p>
+        This ruby program will prompt the user for a temperature 
+        in degrees Celsius and let the user know what the 
+        corresponding temperature is in Fahrenheit.
+      </p>
+    </div>
+
+    <div class="box">
+<pre><code class="language-ruby">n = 0
+print &quot;Enter the temperature in degrees Celsius: &quot;
+degrees_c = gets.chomp.to_i
+degrees_f = degrees_c * 9 / 5 + 32
+
+puts &quot;The temperature in degrees Farenheit is #{degrees_f}&quot;
+puts &quot;Goodbye&quot;</code></pre>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+<pre><code class="language-ruby">n = 0
+def ordinal(input)
+  mod10 = input % 10
+  mod100 = input % 100
+  
+  if mod10 == 1 &amp;&amp; mod100 != 11
+    puts &quot;The number #{input} is the #{input}st item!&quot;
+  elsif mod10 == 2 &amp;&amp; mod100 != 12
+    puts &quot;The number #{input} is the #{input}nd item!&quot;
+  elsif mod10 == 3 &amp;&amp; mod100 != 13
+    puts &quot;The number #{input} is the #{input}rd item!&quot;
+  else mod10 &gt; 3
+    puts &quot;The number #{input} is the #{input}th item!&quot;
+  end
+end
+
+print &quot;Enter a number to determine its ordinal: &quot;
+input = gets.chomp.to_i
+ordinal(input)
+puts &quot;Goodbye&quot;</code></pre>
+    </div>
+
+    <div class="box">
+      <h4>Ordinal Challenge</h4>
+      <p>
+        This ruby program will convert a plain number
+        to the ordinal of the number. So for example,
+        if the user enters 2, it will display 2nd, if
+        the user enters 3, it will display 3rd, etc.
+      </p>
+    </div>
+
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Foobar</h4>
+      <p>
+        This ruby program is an adaptation of a classic technical 
+        interview problem which displays sequences 
+        of the Foobar pattern.
+      </p>
+    </div>
+
+    <div class="box">
+<pre><code class="language-ruby">n = 0
+print &quot;How many items would you like to see? &quot;
+i = gets.chomp.to_i
+
+def foobar(i)
+  n = 1
+  while n &lt;= i
+    remainder_when_divided_by_3 = n % 3
+    remainder_when_divided_by_5 = n % 5
+
+    if remainder_when_divided_by_3 == 0 &amp;&amp; remainder_when_divided_by_5 == 0
+      puts &quot;FooBar&quot;
+    elsif remainder_when_divided_by_3 == 0
+      puts &quot;Foo&quot;
+    elsif remainder_when_divided_by_5 == 0
+      puts &quot;Bar&quot;
+    else remainder_when_divided_by_3 != 0 &amp;&amp; remainder_when_divided_by_5 != 0
+      puts n
+    end
+    n = n + 1
+  end
+end
+
+foobar(i)
+puts &quot;Goodbye&quot;</code></pre>
+    </div>
+
+    <br class="clear" />
+
+    <!-- web apps section -->
+
+    <h3 id="web-apps">WEB APPS</h3>
+    <hr class="yellow" />
+
+    <div class="box">
+      <h4>Quote Generator</h4>
+      <img src="app-screenshots/splurty.png" class="full-width" />
+      <p>
+        A database-powered quote generator with a mobile-first
+        design, using the Ruby on Rails framework, HTML, and CSS.
+        Uses Git and GitHub for version control, and launched
+        on Heroku.
+      </p>
+    </div>
+
+    <div class="box">
+      <h4>Yelp Clone</h4>
+      <img src="app-screenshots/nomster.png" class="full-width" />
+      <p>
+        A Yelp clone that integrates with the Google Maps API 
+        and includes features like user comments, star ratings,
+        image uploading, and user authentication.
+      </p>
+    </div>
+    <br class="clear" />
+
+    <div class="box">
+      <h4>Two-Sided Market Place</h4>
+      <img src="app-screenshots/flixter.png" class="full-width" />
+      <p>
+        A two-sided, video-streaming marketplace platform that
+        features credit card payment capabilities, user role
+        management, complex user interfaces, and advanced
+        database relationships.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Test Driven Development</h4>
+      <img src="app-screenshots/grammable.png" class="full-width" />
+      <p>
+        An Instagram clone that was built using industry-standard, test-driven
+        development following numerous red/green/refactor cycles.
+      </p>
+    </div>
+    <br class="clear" />
+    <div class="box">
+      <h4>Single Page Todo Application</h4>
+      <img src="app-screenshots/todoster.png" class="full-width" />
+      <p>
+        This single-page to-do application features a
+        fluid user interface that– by using JavaScript–
+        allows users to rapidly add dynamic content.
+      </p>
+    </div>
+    <div class="box">
+      <h4>Agile Team Project</h4>
+      <img src="app-screenshots/chess.png" class="full-width" />
+      <p>
+        Worked on an Agile software development team building
+        a chess application. Under the guidance of a senior software engineer,
+        we had weekly Agile team meetings for code reviews, sprint planning,
+        and feature assignments.
+      </p>
+    </div>
+
+    <br class="clear" />
+    <h3 id="skills-and-tools">Skills &amp; Tools</h3>
+    <hr class="yellow" />
+
+    <!-- skills & tools Section -->
+
+    <p class="skills-and-tools">
+      Ernie has developed proficiency and expertise 
+      in the following programming languages and 
+      comfort with the following tools.
+    </p>
+    <div class="icons">
+
+      <img src="skills-and-tools/github.png" class="icon">
+      <img src="skills-and-tools/rubocop.png" class="icon">
+      <img src="skills-and-tools/trello.png" class="icon"" class="icon">
+      <img src="skills-and-tools/slack.png" class="icon">
+      <img src="skills-and-tools/codeship.png" class="icon">
+
+      <br class="clear" />
+      <img src="skills-and-tools/skills.png" class="icon" />
+    </div>
+
+    <!-- footer -->
+
+    <div class="contact-me" id="hire-me">
+      <h3 class="contact-headline">CONTACT</h3>
+      <hr class="yellow" />
+      <p class="contact-info">
+        Currently seeking new opportunities.
+        Please get in touch via email:
+      </p>
+
+      <p>
+        <a href="mailto:jamisonernie@gmail.com" class="contact-link">jamisonernie@gmail.com</a>
+      </p>
+    </div>
+      
+    </div>
+
+  </body>
+</html>
